@@ -8,16 +8,43 @@
     font-family: 'Karla', sans-serif;
     overflow-x: hidden;
   }
+
+  .response{
+    background-color: #404040;
+    color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  #letter{
+    justify-content: center;
+    max-width: 80%;
+    margin-top: 0;
+  }
+
+  #return{
+    font-size: 1.5rem;
+  }
+
+  textarea, input{
+  font-family: 'Karla', sans-serif;
+  }
   
   nav{
+    background-color: #404040;
     min-height:8vh;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 2;
-    transition: 150ms ease-in-out;
   }
 
   
@@ -54,15 +81,15 @@
     position: absolute;
     top: 8vh;
     width: 100%;
-    height: 30vh;
-    background-color: #1b1b1b;
+    height: 20vh;
+    background-color: #404040;
     display: flex;
     flex-direction: column;
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    transform: translateY(-150%);
-    transition: all 400ms ease-out;
+    transform: translateY(-100%);
+    transition: all 410ms ease;
     z-index: 1;
     }
 
@@ -95,7 +122,7 @@
   }
 
   .landing-page, .client-project{
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 8vh;
   }
 
@@ -106,6 +133,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: all 400ms ease;
+  }
+
+  .landing-page.open{
+    transform: translateY(25%);
   }
 
   .landing-page h1{
@@ -120,15 +152,77 @@
     font-size: 1.2rem;
   }
 
+  .scrolldown{
+    position:absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+  }
+  
+  .scrolldown span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid #25AAE1;
+    border-left: 3px solid #25AAE1;
+    animation: animate 1.2s linear infinite;
+    opacity: 0;
+  }
+  
+  .scrolldown span:nth-child(1){
+    transform: translate(-15px, -15px);
+    animation-delay: 0s;
+  }
+  .scrolldown span:nth-child(2){
+    transform: translate(0,0);
+    animation-delay: -0.2s;
+  }
+  
+  .scrolldown span:nth-child(3){
+    transform: translate(15px, 15px);
+    animation-delay: -0.4s;
+  }
+  
+  .scrolldown:hover{
+    cursor: pointer;
+  }
+  
+  @keyframes animate{
+    0%{
+      top:5px;
+      left:5px;
+      opacity:0;
+    }
+    25%{
+      top:0px;
+      left:0px;
+      opacity:1;
+    }
+    50%, 100%{
+      top:-5px;
+      left:-5px;
+      opacity:0;
+    }
+  }
+
   .client-project{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 100vh;
+    min-height: 100vh;
+  }
+
+  #grey-back{
+    background-color: #EAEAEA;
   }
 
   #project-title{
-    margin-top: 4vh;
+    margin-top: 2vh;
     color: #404040;
     text-align: center;
   }
@@ -161,15 +255,32 @@
     width: 60%;
   }
 
-  .client-buttons{
+  .extra-info{
+    overflow: hidden;
+  }
+  #pet-text, #photo-text{
+    display: none;
+  }
+
+  #pet-text.open, #photo-text.open{
+    display: block;
+  }
+
+  .cta-buttons{
     width: 60%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5%;
+  }
+
+  #pet-info, #photo-info{
+    font-size: 1rem;
+    padding: 10px;
   }
 
   .cta{
     border: solid 1px #25AAE1;
-    padding: 10px;
+    padding: 8px;
     border-radius: 25px;
     background-color: #25AAE1;
     color: #fcfcfcfc;
@@ -180,3 +291,135 @@
   .cta:hover{
     transform: scale(1.2);
   }
+
+  .skills-projects, .project-container, .project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .project{
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  .project p{
+    width: 60%;
+    text-align: center;
+  }
+  
+  .project-container{
+    max-width:60%;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills-projects{
+    padding-top: 4vh;
+    justify-content: space-around;
+    padding-bottom: 10vh;
+  }
+
+  .skills-title{
+    text-align: center;
+    width: 80%;
+  }
+
+  .skills-title h1{
+    font-weight: 400;
+  }
+
+  .project-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+  }
+
+  #form-project{
+    background-image: url(img/project-images/contact-form.png);
+  }
+
+  #photo-project{
+    background-image: url(img/project-images/photo-gallery.png);
+  }
+
+  #bmi-project{
+    background-image: url(img/project-images/bmi-calc.png);
+  }
+
+  .overall-contact-container, .form-container, #contact-form{
+    color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .overall-contact-container{
+    min-height: 100vh;
+    background-color: #404040;
+    padding-top: 4vh;
+  }
+
+  .contact-title h1{
+    font-weight: 300;
+  }
+
+  .form-control, textarea{
+    font-size: 1rem;
+    width: 80vw;
+    background: none;
+    color: #fcfcfc;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fcfcfc;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fcfcfc;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fcfcfc;
+  }
+
+  .form-control-submit{
+    background-color: #1ebcd8;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    width: 60%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.icons{
+  display: flex;
+  width: 60%;
+  height: auto;
+  justify-content: space-around;
+}
+
+/* Icons Appearance */
+.fa {
+  font-size: 2rem;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 200ms ease;
+  background: none;  
+  color: #fcfcfc;
+}
+/*hover appearance*/
+.fa:hover {
+  color: #25AAE1;
+  transform: scale(1.2, 1.2);
+}
+

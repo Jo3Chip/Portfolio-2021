@@ -3,42 +3,26 @@
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll('.nav-links li');
+const landing = document.querySelector('.landing-page');
 
 burger.addEventListener('click', () => {
   navLinks.classList.toggle("open");
+  landing.classList.toggle("open");
   links.forEach( link => {
     link.classList.toggle('fade')
   });
 });
 
-const nav = document.querySelector("nav");
-const sectionOne = document.querySelector(".landing-page");
-const burgerLine = document.querySelectorAll(".burger-line");
+const petText = document.getElementById("pet-text");
+const petInfoButton = document.getElementById("pet-info");
 
-const sectionOneOptions = {
-  rootMargin: "-50px 0px 0px 0px"
-};
+petInfoButton.addEventListener('click', () => {
+  petText.classList.toggle("open");
+});
 
-const sectionOneObserver = new IntersectionObserver(function (
-  entries, 
-  sectionOneObserver
-) {
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) {
-      document.getElementById("logo").src = "img/logo-light-bg copy.png";
-      nav.classList.add("nav-scrolled");
-      burgerLine[0].classList.add("burger-line-scrolled");
-      burgerLine[1].classList.add("burger-line-scrolled");
-      burgerLine[2].classList.add("burger-line-scrolled");
-    } else{
-      document.getElementById("logo").src = "img/logo-drk-bg copy.png";
-      nav.classList.remove("nav-scrolled");
-      burgerLine[0].classList.remove("burger-line-scrolled");
-      burgerLine[1].classList.remove("burger-line-scrolled");
-      burgerLine[2].classList.remove("burger-line-scrolled");
-    }
-  })
-}, 
-sectionOneOptions);
+const photoText = document.getElementById("photo-text");
+const photoInfoButton = document.getElementById("photo-info");
 
-sectionOneObserver.observe(sectionOne);
+photoInfoButton.addEventListener('click', () => {
+  photoText.classList.toggle("open");
+});
