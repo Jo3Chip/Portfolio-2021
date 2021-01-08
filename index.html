@@ -19,74 +19,48 @@
 </head>
 <body>
     <header>
-        <!--Navigation Bar-->
-        <nav>
-            <div class="logo-container">
-                <img id="logo" src="img/logo-drk-bg copy.png" alt="JC Logo">
-            </div>
-            <!-- Burger Menu For Tablet/Mobile View -->
-            <div class="burger">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-            </div>
-        </nav>
-        <ul class="nav-links">
-            <li class="nav-link"><a href="">Portfolio</a></li>
-            <div id="seperator"></div>
-            <li class="nav-link"><a href="">About Me</a></li>
-            <div id="seperator"></div>
-            <li class="nav-link"><a href="">Contact Me</a></li>
-            <div id="seperator"></div> 
-          </ul>
-    </header>
 
     <main>
 
         <div class="landing-page">
-            <div class="main-title" id="landing-title">
-                <h1>Joseph Chipperfield</h1><br>
-                <h2>Creative Web Developer</h2>
+
+            <div class="logo-container">
+                <img id="logo" src="img/logo-drk-bg copy.png" alt="JC Logo">
             </div>
-            <img src="" alt="">
-            <p>Welcome to my Portfolio <br><br> I'm a Web Developer who loves attention to detail whilst creating something new, exciting and original. <br><br><br></p>
-            <div class="scrolldown">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div><br>
-              <p> Swipe Up</p>
+            <img class="image-container" id="profile-img" src="img/circle-1.png" alt="">
+            <p>Welcome to my Portfolio <br><br> I'm a Web Developer who enjoys creating technical, creative and beautiful solutions to your needs whilst maitaining a keen attention to detail.<br><br><br></p>
+            <div class="cta-buttons">
+                <button id="portfolio-nav" class="cta">Portfolio</button>
+                <button id="contact-nav" class="cta">Contact</button>
+                </div>
         </div>
         <!--Portfolio area of the page-->
         <div class="portfolio">
+            <div class="main-title" id="project-title">
+                <h1>Portfolio</h1>
+                <h2>Client Sites</h2>
+            </div>
             <!--Framework for a client project, can easily be replicated for more projects-->
-            <div class="client-project">
-                <div class="main-title" id="project-title">
-                    <h1>Portfolio</h1><br>
-                    <h2>Client Site</h2>
-                </div>
-                <div class="image-container">
+            <div class="client-project" id="first-project">
+                <div id="client-image" class="image-container" >
                     <img src="img/desktop-petmania.png" alt="">
                 </div>
                 <div class="client-description">
                     <h3>Petmania</h3><br><br>
-                    <p>Design and Development of a new site for a local pet supplie sbusiness with the ability to maintain themselves.</p><br><br>
+                    <p>Design and Development of a new site for a local pet supplies business with the ability to maintain themselves.</p><br><br>
                     <div class="extra-info">
                         <p id="pet-text">Utilising Figma to design the site and Wordpress to Develop it I was able to give the client a modern site that can be updated regularly and easily by themselves.The customer requested I use an existing theme so I chose Astra for this site due it’s fast and lightweight design. I also created a handbook that went through all the instructions they would need to update the site and used a plug-in to create a custom backend UI that simplified the experience further. All of this led to a successful site that can be expanded in the future with facilities such as e-commerce.</p><br><br>
                     </div>
+                    <div id="client-cta" class="cta-buttons">
+                        <button id="pet-info" class="cta">View Info</button>
+                        <a href="https://petmaniauk.co.uk" id="pet-site" class="cta">Visit Site</a>
+                    </div>
                 </div>
-                <div class="cta-buttons">
-                    <button id="pet-info" class="cta">View Info</button>
-                    <a href="https://petmaniauk.co.uk" id="pet-site" class="cta">Visit Site</a>
-                </div>
+                
             </div>
-            <div class="client-project" id="grey-back">
-                <div class="main-title" id="project-title">
-                    <h1></h1><br>
-                    <h2></h2>
-                </div>
-                <div class="image-container">
-                    <img src="img/kw-photography.png" alt="">
+            <div class="client-project" id="second-project">
+                <div id="client-image" class="image-container">
+                    <img  src="img/kw-photography.png" alt="">
                 </div>
                 <div class="client-description">
                     <h3>KW Photography</h3><br><br>
@@ -95,18 +69,19 @@
                     <div class="extra-info">
                         <p id="photo-text">Utilising Figma to design the site and Wordpress to Develop it I was able to give the client a modern site that can be updated regularly and easily by themselves.The customer requested I use an existing theme so I chose Astra for this site due it’s fast and lightweight design. I also created a handbook that went through all the instructions they would need to update the site and used a plug-in to create a custom backend UI that simplified the experience further. All of this led to a successful site that can be expanded in the future with facilities such as e-commerce.</p><br><br>
                     </div>
+                    <div id="client-cta" class="cta-buttons">
+                        <button id="photo-info" class="cta">View Info</button>
+                        <a href="http://jcwebdev.website" class="cta">Visit Site</a>
+                    </div>
                 </div>
-                <div class="cta-buttons">
-                    <button id="photo-info" class="cta">View Info</button>
-                    <a href="http://jcwebdev.website" class="cta">Visit Site</a>
-                </div>
+                
             </div>
             <!--Skills project section of the site, where small projects can be added to show technical abilities.-->
+            <div class="skills-title">
+                <h1>Skills Projects</h1><br>
+                <p>These are some of the projects I worked on to imporove upon my skills indifferent areas and with new technologies.</p>
+            </div>
             <div class="skills-projects">
-                <div class="skills-title">
-                    <h1>Skills Projects</h1><br>
-                    <p>These are some of the projects I worked on to imporove upon my skills indifferent areas and with new technologies.</p>
-                </div>
                 <!--Framework for a skills prject to be replicated when new projects are added.-->
                 <div class="project">
                     <div id="form-project" class="project-container">
@@ -114,7 +89,6 @@
                     <p>A simple contact form using HTML, CSS and PHP.</p>
                     <div class="cta-buttons">
                         <a href="https://github.com/Jo3Chip/contact-form" id="form-code" class="cta">View Code</a>
-                        <a href="#" id="form-page" class="cta">Visit Site</a>
                     </div>
                 </div>
                 <div class="project">
@@ -123,7 +97,7 @@
                     <p>A responsive gallery using HTML, CSS and JS</p>
                     <div class="cta-buttons">
                         <a href="https://github.com/Jo3Chip/jsPhotoAlbum" id="photo-code" class="cta">View Code</a>
-                        <a href="#" id="photo-page" class="cta">Visit Site</a>
+                        <a href="https://jo3chip.github.io/jsPhotoAlbum/" id="photo-page" class="cta">Visit Site</a>
                     </div>
                 </div>
                 <div class="project">
@@ -132,7 +106,7 @@
                     <p>A BMI calculator to use JS DOM manipultation.</p>
                     <div class="cta-buttons">
                         <a href="https://github.com/Jo3Chip/bmiCalculator" id="bmi-code" class="cta">View Code</a>
-                        <a href="#" id="bmi-page" class="cta">Visit Site</a>
+                        <a href="https://jo3chip.github.io/bmiCalculator/" id="bmi-page" class="cta">Visit Site</a>
                     </div>
                 </div>
             </div>
