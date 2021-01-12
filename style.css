@@ -8,11 +8,26 @@
     font-family: 'Karla', sans-serif;
 }
 body {
-    font-size: 1rem;
+    font-size: 1.2rem;
     overflow-x: hidden;
 }
 input, button, textarea {
     font-size: 100%;
+}
+
+nav{
+  max-height: 8vh;
+  margin: 2%;
+
+}
+
+.logo-container{
+  height: 8vh;
+  width: auto;
+}
+
+#logo1{
+  height: 8vh;
 }
 
   a{
@@ -53,7 +68,12 @@ input, button, textarea {
   }
 
   .logo-container{
-    max-width: 50%;
+    height: 20vh;
+  }
+
+  #logo{
+    height: 80%;
+    width: auto;
   }
 
   .landing-page, .client-project{
@@ -63,7 +83,7 @@ input, button, textarea {
 
   .landing-page{
     color: #fcfcfc;
-    background-color: #404040;
+    background-color: #1b1d22;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -81,6 +101,7 @@ input, button, textarea {
   .landing-page p, .main-title{
     text-align: center;
     max-width: 80%;
+    height: auto;
     z-index: 2;
   }
 
@@ -110,7 +131,6 @@ input, button, textarea {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    scroll-snap-align: start;
   }
 
   #first-project{
@@ -127,16 +147,15 @@ input, button, textarea {
 
 
   .image-container{
-    display: flex;
-    justify-content: flex-end;
-    max-height: 60%;
-    max-width: 100%;
-    margin-top: 30%;
+    display: block;
+    max-height: auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-top: 25%;
   }
 
   .image-container img{
-    width: 90%;
-    max-height: auto;
+    width: 100%;
   }
 
   .client-description{
@@ -164,12 +183,12 @@ input, button, textarea {
     margin-bottom: 5%;
   }
 
-  #client-cta{
+  .client-cta{
     width: 100%;
   }
 
   .cta{
-    border: solid 1px #25AAE1;
+    border: none;
     padding: 8px;
     border-radius: 25px;
     background-color: #25AAE1;
@@ -258,7 +277,7 @@ input, button, textarea {
 
   .overall-contact-container{
     min-height: 100vh;
-    background-color: #404040;
+    background-color: #1b1d22;
   }
 
   .contact-title h1{
@@ -272,27 +291,25 @@ input, button, textarea {
     color: #fcfcfc;
   }
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder { 
     color: #fcfcfc;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #fcfcfc;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #fcfcfc;
+    opacity: 1;
   }
 
   .form-control-submit{
     background-color: #1ebcd8;
+    border: none;
     color: white;
     font-size: 1rem;
     padding: 10px;
     width: 60%;
     border-radius: 25px;
     margin-bottom: 10px;
+    transition: ease 200ms;
+}
+
+.form-control-submit:hover{
+  transform: scale(1.05);
 }
 
 .icons{
@@ -304,8 +321,6 @@ input, button, textarea {
 
 /* Icons Appearance */
 .fa {
-  font-size: 2rem;
-  width: 20%;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -344,26 +359,18 @@ input, button, textarea {
     font-size: 120%;
     margin-bottom: 5%;
   }
-  #client-cta{
+  .client-cta{
     width: 100%;
   }
   .client-description, .extra-info{
     font-size: 1.4rem
   }
 
-  #client-image{
-    width: 50%;
-    margin-left: auto;
-    margin-top: 0;
-  }
   .client-description{
     width: 40%;
     margin: 5% auto 0% auto;
   }
-  .client-project{
-    flex-direction: row-reverse;
-    min-height:50vh;
-  }
+
   .skills-title p{
     font-size: 140%;
   }
@@ -403,5 +410,15 @@ input, button, textarea {
   }
   .cta-buttons{
     width: 80%;
+  }
+  .client-cta{
+    width: 100%;
+  }
+  .client-image{
+    margin-top: 5%;
+    width: 50%;
+}
+  .client-project{
+    flex-direction: row-reverse;
   }
 }
