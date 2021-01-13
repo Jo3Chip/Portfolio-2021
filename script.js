@@ -1,3 +1,19 @@
+
+
+
+const burger = document.querySelector(".toggle-icon");
+const container = document.querySelector("#nav-container");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll('.nav-links li');
+
+burger.addEventListener('click', () => {
+  container.classList.toggle("pushed");
+  navLinks.classList.toggle("open");
+  links.forEach( link => {
+    link.classList.toggle('fade')
+  });
+});
+
 //Function for extra text to be displayed on the client portfolio sections.
 
 const petText = document.getElementById("pet-text");
@@ -41,15 +57,31 @@ function smoothScroll(target, duration){
   requestAnimationFrame(animation);
 }
 
-var portfolioScroll = document.getElementById('portfolio-nav');
-var contactScroll = document.getElementById('contact-nav');
-var backToTop = document.getElementById('back-top');
+const portfolioScroll = document.getElementById('portfolio-nav');
+const contactScroll = document.getElementById('contact-nav');
+const backToTop = document.getElementById('back-top');
+const aboutScroll = document.getElementById('about-nav');
+const seeMore = document.getElementById('see-more');
 
 portfolioScroll.addEventListener('click', function(){
 smoothScroll('.portfolio', 1000);
+navLinks.classList.toggle("open");
+container.classList.toggle("pushed");
 })
 contactScroll.addEventListener('click', function(){
 smoothScroll('.overall-contact-container', 1000);
+navLinks.classList.toggle("open");
+container.classList.toggle("pushed");
+})
+aboutScroll.addEventListener('click', function(){
+smoothScroll('.about-me-container', 1000);
+navLinks.classList.toggle("open");
+container.classList.toggle("pushed");
+})
+seeMore.addEventListener('click', function(){
+smoothScroll('.portfolio', 1000);
+navLinks.classList.toggle("open");
+container.classList.toggle("pushed");
 })
 backToTop.addEventListener('click', function(){
 smoothScroll('.landing-page', 1000);
