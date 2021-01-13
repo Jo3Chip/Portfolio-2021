@@ -499,6 +499,7 @@ a{
 }
 
 .response{
+  font-size: 1rem;
   background-color: #404040;
   color: #fcfcfc;
   display: flex;
@@ -511,10 +512,28 @@ a{
   text-align: center;
 }
 
+.response a{
+  text-decoration: underline;
+}
+.response a:hover{
+  color: #25AAE1;
+}
+.response a:visited{
+  color: #fcfcfc;
+}
+
+
+
+#logo{
+  padding-left: 5%;
+  height: 5vh;
+
+}
+
 #letter{
   justify-content: center;
   max-width: 80%;
-  margin-top: 0;
+  margin: 0 auto;
 }
 
 #return{
@@ -578,6 +597,9 @@ a{
   .form-control, .form-control-submit, text-area{
     font-size: 140%;
     width: 30vw;
+  }
+  #letter{
+    max-width: 40%;
   }
 }
 
@@ -703,4 +725,8 @@ a{
   .contact-title{
     font-size: 2rem;
   }
+  #letter{
+    max-width: 25%;
+  }
+
 }
