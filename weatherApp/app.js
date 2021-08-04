@@ -1,6 +1,6 @@
 //Global Variables
 //URL for the API call
-var baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
+var baseURL = 'https://api.openweathermap.org/data/2.5/weather?q='
 var units = '&units=metric'
 var apiKey = '&appid=3f265935a23a9aeba683d087c268057d'
 //Variables for input and output of API information
